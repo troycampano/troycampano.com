@@ -10,6 +10,13 @@
 		gtag('js', new Date());
 
 		gtag('config', 'G-MZKDP89LEM');
+
+		var cplink = function (url) {
+			ga('send', 'event', 'outbound', 'click', url, {
+				'transport': 'beacon',
+				'hitCallback': function () { document.location = url; }
+			});
+		}
 	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,12 +167,13 @@
 		<center>
 			<div class="title">Troy Campano</div>
 			<div class="links">
-				<a href="https://www.linkedin.com/in/troycampano/" target="_blank">LinkedIn</a><br />
-				<a href="http://instagram.com/troycampano" target="_blank">Instagram</a><br />
-				<a href="https://www.goodreads.com/review/list/31671268-troy-campano?shelf=currently-reading&view=covers" target="_blank">Goodreads</a><br/>
-				<a href="http://www.flickr.com/photos/troycampano/" target="_blank">Flickr</a><br />
-				<a href="https://twitter.com/troycampano" target="_blank">Twitter</a><br />
-				<a href="https://github.com/troycampano" target="_blank">Github</a><br />
+				<a href="https://www.linkedin.com/in/troycampano/" onclick="cplink('https://www.linkedin.com/in/troycampano/'); return false;" target="_blank">LinkedIn</a><br />
+				<a href="http://instagram.com/troycampano" onclick="cplink('http://instagram.com/troycampano'); return false;" target="_blank">Instagram</a><br />
+				<a href="https://www.goodreads.com/review/list/31671268-troy-campano?shelf=currently-reading&view=covers"
+					target="_blank" onclick="cplink('https://www.goodreads.com/review/list/31671268-troy-campano?shelf=currently-reading&view=covers'); return false;">Goodreads</a><br />
+				<a href="http://www.flickr.com/photos/troycampano/" onclick="cplink('http://www.flickr.com/photos/troycampano/'); return false;" target="_blank">Flickr</a><br />
+				<a href="https://twitter.com/troycampano" onclick="cplink('https://twitter.com/troycampano'); return false;" target="_blank">Twitter</a><br />
+				<a href="https://github.com/troycampano" onclick="cplink('https://github.com/troycampano'); return false;" target="_blank">Github</a><br />
 			</div>
 			<br><br>
 		</center>
